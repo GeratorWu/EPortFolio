@@ -1,0 +1,33 @@
+.grillage{
+    display: grid;
+    grid-template-columns: 10em 10em 10em;
+    grid-template-rows: 10em 10em 10em;
+    border: 2px solid black;
+    width: 30em;
+    height: 30em;
+}
+
+.case{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9em;
+    cursor: pointer;
+}
+
+.centre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+}
+
+.bas{
+    display: flex;
+    gap: 2em;
+}
+
+.droite{
+    width: 30em;
+}

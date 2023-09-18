@@ -1,0 +1,51 @@
+.competencebloc{
+    max-width: 80rem;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+.competencegauche, .competencedroite{
+    text-align: center;
+    width: 50%;
+}
+
+.competencelogiciel{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.competencelogiciel p{
+    border: 1px solid black;
+    text-align: center;
+    width: 15rem;
+    margin: 1rem auto;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.competencelogiciel p:hover{
+    background-color: rgb(218, 218, 218);
+}
+
+.competenceprojet{
+    width: 39rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.competencelangage{
+    border-bottom: 5px double black;
+    margin: 5px 0px;
+}
+
+.competencetitre{
+    border-bottom: 2px solid black;
+    margin: 10px auto 0 auto;
+}
