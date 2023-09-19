@@ -1,7 +1,7 @@
 .grillage{
     display: grid;
-    grid-template-columns: 10em 10em 10em;
-    grid-template-rows: 10em 10em 10em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     border: 2px solid black;
     width: 30em;
     height: 30em;
@@ -12,7 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 9em;
+    font-size: 6em;
     cursor: pointer;
 }
 
@@ -20,14 +20,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 80vh;
+    justify-content: center;
+    height: 100vh;
+    border: 1px solid black;
 }
 
-.bas{
+.TTTtexte{
     display: flex;
-    gap: 2em;
+    flex-direction: column;
+    align-items: center;
 }
 
-.droite{
-    width: 30em;
+.TTTbutton{
+    height: 2.5rem;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 2em;
+    width: 10rem;
+    font-size: 1rem;
+}
+
+@media screen and (max-width:62rem){
+    .grillage{
+        width: 20em;
+        height: 20em;
+    }
+
+    .case{
+        font-size: 4em;
+    }
 }

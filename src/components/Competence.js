@@ -4,8 +4,8 @@ import { useState } from 'react'
 
 function Competence() {
     const [titre, setTitre] = useState("Cliquez sur les compétences")
-    const [description, setDescription] = useState("Sur la gauche")
-    const [langage, setLangage] = useState("<-")
+    const [description, setDescription] = useState("")
+    const [langage, setLangage] = useState(" - ")
 
 
     const afficheProjet = (i) => {

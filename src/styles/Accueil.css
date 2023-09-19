@@ -10,7 +10,8 @@
 
 .accueilgauche{
     flex-direction: column;
-    width: 30em;
+    max-width: 30em;
+    padding: 1em;
 }
 
 

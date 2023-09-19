@@ -11,7 +11,7 @@ function TicTacToe() {
     const changerValeur = (i) => {
         if (!finPartie) {
             const nouveauPlateau = [...plateau];
-            if (tour === true && plateau[i] === "") {  
+            if (tour === true && plateau[i] === "") {
                 nouveauPlateau[i] = 'X';
                 setJoueur("Au tour de O");
                 setTour(!tour);
@@ -28,7 +28,7 @@ function TicTacToe() {
             }
             setPlateau(nouveauPlateau);
         }
-        
+
     };
 
     const checkVictoire = (plateau) => {
@@ -57,7 +57,7 @@ function TicTacToe() {
             }
         }
         setEgalite(egalite + 1);
-        if(egalite === 8){
+        if (egalite === 8) {
             setFinPartie(true);
             setJoueur("Égalité, veuillez recommencer");
             setEgalite(0);
@@ -66,7 +66,7 @@ function TicTacToe() {
 
     const recommencer = () => {
         const tmpPlateau = [...plateau];
-        for(let i = 0; i<plateau.length ; i++){
+        for (let i = 0; i < plateau.length; i++) {
             tmpPlateau[i] = "";
         }
         setPlateau(tmpPlateau);
@@ -80,20 +80,18 @@ function TicTacToe() {
     return (
         <div className='centre'>
             <h1>Tic-Tac-Toe</h1>
-            <div className='bas'>
-                <div className='grillage'>
-                    {plateau.map((valeur, index) => (
-                        <div key={index} onClick={() => changerValeur(index)} className='case'>
-                            {valeur}
-                        </div>
-                    ))}
-                </div>
-                <div className='droite'>
-                    <p>{joueur}</p>
-                    <button onClick={() => recommencer()}>Recommencer</button>
-                    <p>{egalite}</p>
-                </div>
+            <div className='TTTtexte'>
+                <p>{joueur}</p>
+                <button className='TTTbutton' onClick={() => recommencer()}>Recommencer</button>
             </div>
+            <div className='grillage'>
+                {plateau.map((valeur, index) => (
+                    <div key={index} onClick={() => changerValeur(index)} className='case'>
+                        {valeur}
+                    </div>
+                ))}
+            </div>
+
         </div>
     )
 }

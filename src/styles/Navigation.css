@@ -50,3 +50,9 @@ ul{
     height: 100%;
     margin: 0;
 }
+
+@media screen and (max-width:62rem){
+    .navigation{
+        display: none;
+    }
+}
