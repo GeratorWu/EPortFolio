@@ -5,7 +5,8 @@ function TicTacToe() {
     const [plateau, setPlateau] = useState(Array(9).fill(""));
     const [tour, setTour] = useState(true);
     const [finPartie, setFinPartie] = useState(false);
-    const [joueur, setJoueur] = useState("Au tour de X")
+    const [joueur, setJoueur] = useState("Au tour de X");
+    const [egalite, setEgalite] = useState(0);
 
     const changerValeur = (i) => {
         if (!finPartie) {
@@ -13,18 +14,21 @@ function TicTacToe() {
             if (tour === true && plateau[i] === "") {  
                 nouveauPlateau[i] = 'X';
                 setJoueur("Au tour de O");
+                setTour(!tour);
+                checkVictoire(nouveauPlateau);
             }
             else if (tour === false && plateau[i] === "") {
                 nouveauPlateau[i] = 'O';
                 setJoueur("Au tour de X");
+                setTour(!tour);
+                checkVictoire(nouveauPlateau);
             }
             else {
-                alert('Vous ne pouvez pas jouer ici !')
+                alert('Vous ne pouvez pas jouer ici !');
             }
             setPlateau(nouveauPlateau);
-            setTour(!tour);
-            checkVictoire(nouveauPlateau);
         }
+        
     };
 
     const checkVictoire = (plateau) => {
@@ -44,11 +48,19 @@ function TicTacToe() {
             if (plateau[a] === 'X' && plateau[b] === 'X' && plateau[c] === 'X') {
                 setJoueur("Joueur X a gagné.");
                 setFinPartie(true);
+                return;
             }
             else if (plateau[a] === 'O' && plateau[b] === 'O' && plateau[c] === 'O') {
                 setJoueur("Joueur O a gagné.");
                 setFinPartie(true);
+                return;
             }
+        }
+        setEgalite(egalite + 1);
+        if(egalite === 8){
+            setFinPartie(true);
+            setJoueur("Égalité, veuillez recommencer");
+            setEgalite(0);
         }
     }
 
@@ -61,6 +73,7 @@ function TicTacToe() {
         setFinPartie(false);
         setTour(true);
         setJoueur("Au tour de X");
+        setEgalite(0);
     }
 
 
@@ -78,6 +91,7 @@ function TicTacToe() {
                 <div className='droite'>
                     <p>{joueur}</p>
                     <button onClick={() => recommencer()}>Recommencer</button>
+                    <p>{egalite}</p>
                 </div>
             </div>
         </div>
