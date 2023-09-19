@@ -40,6 +40,9 @@
 }
 
 @media screen and (max-width:62rem){
+    .centre{
+        height: auto;
+    }
     .grillage{
         width: 20em;
         height: 20em;

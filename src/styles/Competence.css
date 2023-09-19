@@ -53,5 +53,7 @@
 @media screen and (max-width:62rem){
     .competencebloc{
         flex-direction: column;
+        height: auto;
     }
+    
 }
