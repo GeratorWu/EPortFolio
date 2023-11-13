@@ -1,11 +1,25 @@
-.competencebloc{
+.competencehaut{
     max-width: 80rem;
-    height: 100vh;
+    height: 80vh;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2em;
+}
+
+
+.competencebas{
+    max-width: 40rem;
+    text-align: center;
+    margin: auto;
+    border-left: 10px double black;
+    border-right: 10px double black;
+}
+
+.liengithub{
+    color: black;
+    font-size: 1.3rem;
 }
 
 .competencegauche, .competencedroite{
@@ -51,7 +65,7 @@
 }
 
 @media screen and (max-width:62rem){
-    .competencebloc{
+    .competencehaut{
         flex-direction: column;
         height: auto;
     }
