@@ -11,4 +11,15 @@
     color: white;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
+    max-width: 90vw;
+}
+
+.inviteReponseBloc img{
+    max-width: 90vw;
+}
+
+.inviteReponseSousBloc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

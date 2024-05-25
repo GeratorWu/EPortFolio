@@ -21,7 +21,6 @@
     font-size: 1.5rem;
     background-color: #ff80ab;
     border: none;
-    margin-left: 2rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
@@ -29,4 +28,11 @@
 .dateBloc input{
     height: 2rem;
     font-size: 1.8rem;
+}
+
+.dateBloc form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
 }
