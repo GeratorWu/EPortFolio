@@ -1,11 +1,18 @@
-import Accueil from './Accueil'
-import Navigation from './Navigation'
-import TicTacToe from './TicTacToe'
-import Competence from './Competence'
 import '../App.css'
+import DateComponent from './perso/DateComponent';
+import InvitePage from './perso/InvitePage';
+import PageAccueil from './pageAccueil';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-    return (<div><Navigation /><Accueil /><Competence /><TicTacToe /></div>)
+    return (<div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<PageAccueil />} />
+        <Route path="/date" element={<DateComponent />} />
+        <Route path="/date/:name" element={<InvitePage />} />
+      </Routes>
+    </Router></div>)
 }
 
 export default App

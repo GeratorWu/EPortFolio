@@ -1,0 +1,32 @@
+.dateBloc{
+    background-color: red;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dateBloc h1{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background-color: #ff80ab;
+}
+
+.dateBloc button{
+    color: white;
+    font-size: 1.5rem;
+    background-color: #ff80ab;
+    border: none;
+    margin-left: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.dateBloc input{
+    height: 2rem;
+    font-size: 1.8rem;
+}
