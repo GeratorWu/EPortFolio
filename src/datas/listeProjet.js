@@ -49,6 +49,12 @@ export const listeProjet = [
         description: "Refonte d'un site web en ajoutant des formulaires qui donnent lieu à un classement. Tous les résultats sont enregistrés via une BD."
     },
     {
+        id: 9,
+        nom: "Logiciel RH",
+        langage: 'Typescript - VueJs',
+        description: "Stage de 3ème année de BUT informatique. Développement d'un logiciel de pilotage RH pour D2BI."
+    },
+    {
         id: 99,
         nom: '-',
         langage: '-',

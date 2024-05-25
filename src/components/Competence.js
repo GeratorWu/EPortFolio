@@ -23,6 +23,7 @@ function Competence() {
                     <div className='competencelogiciel'>
                         <div>
                             <h2>Développement logiciel</h2>
+                            <p onClick={() => afficheProjet(9)}>Typescript</p>
                             <p onClick={() => afficheProjet(1)}>Java</p>
                             <p onClick={() => afficheProjet(2)}>VBnet</p>
                             <p onClick={() => afficheProjet(3)}>C</p>
