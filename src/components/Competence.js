@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 function Competence() {
     const [titre, setTitre] = useState("Cliquez sur les compétences")
-    const [description, setDescription] = useState("")
+    const [description, setDescription] = useState("Vous pouvez découvrir les divers projets que j'ai réalisés en cliquant sur les différents langages de programmation.")
     const [langage, setLangage] = useState(" - ")
 
 
@@ -14,6 +14,10 @@ function Competence() {
         setDescription(projetCible.description);
         setLangage(projetCible.langage);
     }
+
+    const createMarkup = (html) => {
+        return { __html: html };
+    };
 
     return (
         <div className='competencebloc'>
@@ -28,7 +32,7 @@ function Competence() {
                             <p onClick={() => afficheProjet(2)}>VBnet</p>
                             <p onClick={() => afficheProjet(3)}>C</p>
                             <p onClick={() => afficheProjet(4)}>C++</p>
-                            <p onClick={() => afficheProjet(99)}>Python</p>
+                            <p onClick={() => afficheProjet(10)}>Python</p>
                         </div>
                         <div><h2>Développement Web</h2>
                             <p onClick={() => afficheProjet(6)}>React</p>
@@ -43,10 +47,11 @@ function Competence() {
                 </div>
                 <div className='competencedroite'>
                     <h1>Mes projets</h1>
+                    <h2 className='competencelangage'>{langage}</h2>
                     <div className='competenceprojet'>
-                        <h2 className='competencelangage'>{langage}</h2>
+                        
                         <h2 className='competencetitre'>{titre}</h2>
-                        <p>{description}</p>
+                        <p dangerouslySetInnerHTML={createMarkup(description)} />
                     </div>
                 </div>
             </div>

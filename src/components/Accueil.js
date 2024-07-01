@@ -5,8 +5,11 @@ function Accueil(){
     return(
         <div className='accueilbloc'>
             <div className='accueilgauche'>
+                <div class="bubble1"></div>
+                <div class="bubble2"></div>
                 <h1>Bonjour, c'est Patrick Wu</h1>
-                <p>Je suis à la recherche d’un contrat d’apprentissage en tant que Développeur full stack pour 3 ans (rythme : 3 jours entreprise / 2 jours formation ; disponibilité : septembre 2024).</p>
+                <p>Bienvenue sur mon portfolio ! Vous y trouverez une présentation détaillée de mes projets principaux.</p>
+                
             </div>
         </div>
     )

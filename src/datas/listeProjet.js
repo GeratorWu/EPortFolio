@@ -28,7 +28,7 @@ export const listeProjet = [
         id: 5,
         nom: 'Stage',
         langage: 'Angular',
-        description: "Pendant mon stage de 2ème année, j'ai créé un site web en Angular pour mettre en avant les prestations d'une entreprise. Voici l'adresse IP pour y accéder : http://185.209.229.9/"
+        description: "Pendant mon stage de 2ème année, j'ai créé un site web en Angular pour mettre en avant les prestations d'une entreprise. Voici le site : <a href='https://sopasconsulting.com/' target='_blank'>SopasConsulting</a>"
     },
     {
         id: 6,
@@ -40,7 +40,7 @@ export const listeProjet = [
         id: 7,
         nom: 'Site web',
         langage: 'HTML - CSS - JS',
-        description: "Je l'ai utilisé dans tous mes projets Web."
+        description: "Je l'ai utilisé dans tous mes projets Web. Principalement sur ce site que j'ai réalisé : <a href='https://sopasconsulting.com/' target='_blank'>SopasConsulting</a>"
     },
     {
         id: 8,
@@ -51,8 +51,14 @@ export const listeProjet = [
     {
         id: 9,
         nom: "Logiciel RH",
-        langage: 'Typescript - VueJs',
-        description: "Stage de 3ème année de BUT informatique. Développement d'un logiciel de pilotage RH pour D2BI."
+        langage: 'Typescript - VueJs - SQL Server',
+        description: "Stage de 3ème année de BUT informatique chez D2BI en tant que développeur Fullstack. </br> Développement d'un logiciel de pilotage RH pour D2BI. </br> - Implémentation de nouvelles fonctionnalités </br> - Correction de bug</br> - Réalisation de test"
+    },
+    {
+        id: 10,
+        nom: "Stéganographie",
+        langage: 'Python',
+        description: "Cacher un message dans une image en fonction des bits de chaque pixel de l'image."
     },
     {
         id: 99,

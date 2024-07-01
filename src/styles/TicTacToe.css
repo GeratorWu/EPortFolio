@@ -37,6 +37,13 @@
     margin-bottom: 2em;
     width: 10rem;
     font-size: 1rem;
+    background-color: #E4E9FF;
+    border-color: #526ad6;
+    border-radius: 40px;
+}
+
+.TTTbutton:hover{
+    background-color: #6e82db;
 }
 
 @media screen and (max-width:62rem){
