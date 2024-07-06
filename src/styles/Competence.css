@@ -92,5 +92,8 @@
         flex-direction: column;
         height: auto;
     }
-    
+    .competencegauche, .competencedroite, .competencebas{
+        width: 90%;
+        margin-bottom: 1rem;
+    }
 }
