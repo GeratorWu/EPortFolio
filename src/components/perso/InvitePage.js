@@ -19,7 +19,7 @@ const InvitePage = () => {
         <div className='inviteBloc'>
             <div className='inviteContainer'>
                 <h1>{name} ❤️</h1>
-                <p>Veux-tu venir en date avec moi ? 🌹</p>
+                <p>Et si on fêtait la Saint-Valentin ensemble ?</p>
                 <div className='inviteBouton'>
                     <button onClick={handleYesClick} className='yesButton'>Oui 💖</button>
                     <button onClick={handleNoClick} className={`noButton ${noClicked ? 'disabled' : ''}`}>

@@ -9,7 +9,7 @@ const InvitePage = () => {
         <div className='inviteReponseBloc'>
             <div className='inviteReponseSousBloc'>
                 <img src={Minions} alt="Minions qui célèbrent" className='minionsGif' />
-                <h1 className='inviteMessage'>À plus tard, {name} ! 😉</h1>
+                <h1 className='inviteMessage'>À bientôt, {name} ! 😉</h1>
             </div>
         </div>
     );
