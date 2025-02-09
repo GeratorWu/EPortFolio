@@ -1,12 +1,9 @@
-import '../../styles/perso/Date.css'
+import '../../styles/perso/Date.css';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-
 
 function DateComponent() {
     const [inputValue, setInputValue] = useState('');
-    const navigate = useNavigate();
+    const [generatedLink, setGeneratedLink] = useState('');
 
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
@@ -14,18 +11,34 @@ function DateComponent() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        navigate(`/date/${inputValue}`);
+        const link = `${window.location.origin}/date/${inputValue}`;
+        setGeneratedLink(link);
+        navigator.clipboard.writeText(link);
+    };
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText(generatedLink);
+    };
+
+    const handleLinkClick = () => {
+        navigator.clipboard.writeText(generatedLink);
     };
 
     return (
         <div className='dateBloc'>
-          <h1>Qui voulez-vous inviter ?</h1>
-          <form onSubmit={handleSubmit}>
-            <input type="text" value={inputValue} onChange={handleInputChange} />
-            <button type="submit">Valider</button>
-          </form>
+            <h1>Qui voulez-vous inviter ?</h1>
+            <form onSubmit={handleSubmit}>
+                <input type="text" value={inputValue} onChange={handleInputChange} placeholder="Entrez un prénom" />
+                <button type="submit">💌 Générer l'invitation</button>
+            </form>
+            {generatedLink && (
+                <div className='linkContainer'>
+                    <input type="text" value={generatedLink} readOnly onClick={handleLinkClick} />
+                    <button onClick={handleCopy}>📋 Copier</button>
+                </div>
+            )}
         </div>
     );
 }
 
-export default DateComponent
+export default DateComponent;

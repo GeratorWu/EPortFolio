@@ -1,35 +1,150 @@
-.inviteBloc{
-    background-color: red;
+/* Fond romantique avec dégradé et animation subtile */
+.inviteBloc {
+    background: linear-gradient(135deg, #ff4d6d, #ff1e56);
     height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.inviteBloc h1{
-    color: white;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
-.inviteBloc p{
-    font-size: 1.8rem;
-    color: white;
-    font-family: 'Quicksand', sans-serif;
+/* Conteneur avec transparence pour un effet léger */
+.inviteContainer {
+    background: rgba(255, 128, 171, 0.2);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    max-width: 420px;
+    width: 90%;
     text-align: center;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-.inviteBouton{
+/* Titre avec effet lumineux */
+.inviteContainer h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Texte de l'invitation */
+.inviteContainer p {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    color: white;
+}
+
+/* Style des boutons */
+.inviteBouton {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
-.inviteBloc button{
+/* Bouton "Oui" */
+.yesButton {
+    background: #ff80ab;
     color: white;
-    font-size: 1.5rem;
-    background-color: #ff80ab;
+    font-size: 1.3rem;
+    padding: 0.9rem 1.8rem;
     border: none;
-    padding: 0.5rem 1rem;
+    border-radius: 15px;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+    box-shadow: 0px 4px 10px rgba(255, 128, 171, 0.5);
+}
+
+.yesButton:hover {
+    background: #ff3366;
+    transform: scale(1.1);
+}
+
+/* Bouton "Non" avec effet de fuite */
+.noButton {
+    background: #ffb6c1;
+    color: white;
+    font-size: 1.3rem;
+    padding: 0.9rem 1.8rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+.noButton:hover {
+    transform: translateX(calc(-50px + 100px * var(--x)));
+}
+
+.disabled {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    transform: scale(0.95);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .inviteContainer {
+        padding: 2rem;
+    }
+
+    .inviteContainer h1 {
+        font-size: 2rem;
+    }
+
+    .inviteContainer p {
+        font-size: 1.2rem;
+    }
+
+    .yesButton, .noButton {
+        font-size: 1.1rem;
+        padding: 0.7rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .inviteContainer {
+        padding: 1.5rem;
+    }
+
+    .inviteContainer h1 {
+        font-size: 1.8rem;
+    }
+
+    .inviteContainer p {
+        font-size: 1rem;
+    }
+
+    .yesButton, .noButton {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
 }
