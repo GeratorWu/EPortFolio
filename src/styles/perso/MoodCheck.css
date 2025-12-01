@@ -1,0 +1,125 @@
+/* Fond simple */
+.moodCheckBloc {
+    background: #f5f5f5 url('../../assets/hellokittybg.jpg') center/cover no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Sans 3', sans-serif;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Conteneur simple */
+.moodCheckContainer {
+    background: #ffb6c1;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Titre */
+.moodCheckContainer h1 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+/* Style des boutons */
+.moodCheckBouton {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Bouton "Oui" */
+.yesButton {
+    background: #4ade80;
+    color: white;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+
+.yesButton:hover {
+    background: #22c55e;
+}
+
+/* Bouton "Non" */
+.noButton {
+    background: #f87171;
+    color: white;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+
+.noButton:hover {
+    background: #ef4444;
+}
+
+/* Zone de réponse */
+.moodCheckReponse {
+    margin-top: 2rem;
+}
+
+.reponseText {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 400;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .moodCheckContainer {
+        padding: 2rem;
+    }
+
+    .moodCheckContainer h1 {
+        font-size: 1.75rem;
+    }
+
+    .yesButton, .noButton {
+        font-size: 0.95rem;
+        padding: 0.65rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .moodCheckContainer {
+        padding: 1.5rem;
+    }
+
+    .moodCheckContainer h1 {
+        font-size: 1.5rem;
+    }
+
+    .moodCheckBouton {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .yesButton, .noButton {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
+

@@ -2,6 +2,7 @@ import '../App.css'
 import DateComponent from './perso/DateComponent';
 import InvitePage from './perso/InvitePage';
 import InvitePageReponse from './perso/InvitePageReponse';
+import MoodCheck from './perso/MoodCheck';
 import PageAccueil from './pageAccueil';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -13,6 +14,7 @@ function App() {
         <Route path="/date" element={<DateComponent />} />
         <Route path="/date/:name" element={<InvitePage />} />
         <Route path="/date/proposition/:name" element={<InvitePageReponse />} />
+        <Route path="/reem" element={<MoodCheck />} />
       </Routes>
     </Router></div>)
 }
